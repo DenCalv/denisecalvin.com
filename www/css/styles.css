@@ -421,6 +421,22 @@ section {
   }
 
   .nav-buttons .btn { justify-content: center; }
+
+  /* stack the hero: title first, then photo, text, button */
+  .hero-inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero h1 { order: -1; }
+
+  .hero-photo {
+    float: none;
+    width: 100%;
+    max-width: 420px;
+    align-self: center;
+    margin: 0 0 1.25rem;
+  }
 }
 
 @media (max-width: 700px) {
@@ -430,11 +446,7 @@ section {
 
   .hero { padding: 48px 0; }
 
-  .hero-photo {
-    float: none;
-    width: 100%;
-    margin: 0 0 1.25rem;
-  }
+  .hero-photo { max-width: none; }
 
   .hero h1 { font-size: 1.5rem; }
 
