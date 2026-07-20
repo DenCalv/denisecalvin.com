@@ -21,6 +21,9 @@ pnpm-debug.log*
 # local auth config for the dev-only editing tools (secret + password hashes)
 config.local.ts
 
+# SMTP credentials for the contact form
+www/config.local.php
+
 # macOS-specific files
 .DS_Store
 
@@ -28,5 +31,4 @@ config.local.ts
 .idea/
 .dev-tools-stash/
 
-gitwebhook.php
 

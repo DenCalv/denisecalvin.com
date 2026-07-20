@@ -1,0 +1,12 @@
+<?php
+// Copy this file to config.local.php and fill in your SMTP details.
+// config.local.php is gitignored — never commit real credentials.
+return [
+    'smtp_host'       => '',       // e.g. 'smtp.example.com'
+    'smtp_port'       => 587,      // 465 for SSL, 587 for STARTTLS
+    'smtp_encryption' => 'tls',    // 'ssl', 'tls', or 'none'
+    'smtp_username'   => '',
+    'smtp_password'   => '',
+    'smtp_from_email' => '',       // e.g. 'noreply@denisecalvin.com'
+    'smtp_from_name'  => "Denise Calvin's Bookkeeping and Financial Services",
+];
