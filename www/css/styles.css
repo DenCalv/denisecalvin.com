@@ -196,12 +196,13 @@ section {
 /* ---------- Hero ---------- */
 .hero {
   background: linear-gradient(180deg, var(--blue-50) 0%, #f8fbfe 100%);
-  padding: 88px 0;
+  padding: 72px 0;
 }
 
-.hero-inner {
-  max-width: 800px;
-  text-align: center;
+.hero-inner::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 .hero h1 {
@@ -212,6 +213,14 @@ section {
   font-size: 1.15rem;
   color: var(--text-light);
   margin-bottom: 2rem;
+}
+
+.hero-photo {
+  float: right;
+  width: min(340px, 38%);
+  margin: 0 0 1.25rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 28px rgba(13, 43, 82, 0.18);
 }
 
 /* ---------- Services ---------- */
@@ -269,20 +278,6 @@ section {
 .about-content {
   max-width: 850px;
   margin: 0 auto;
-}
-
-.about-content::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-.about-photo {
-  float: right;
-  width: min(320px, 40%);
-  margin: 0 0 1.25rem 1.75rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 16px rgba(13, 43, 82, 0.15);
 }
 
 /* ---------- Contact ---------- */
@@ -433,21 +428,21 @@ section {
 
   .logo { height: 40px; }
 
-  .hero { padding: 56px 0; }
+  .hero { padding: 48px 0; }
 
-  .hero h1 { font-size: 1.9rem; }
+  .hero-photo {
+    float: none;
+    width: 100%;
+    margin: 0 0 1.25rem;
+  }
+
+  .hero h1 { font-size: 1.5rem; }
 
   .hero-text { font-size: 1.05rem; }
 
   .section-title { font-size: 1.6rem; }
 
   .services, .about, .contact { padding: 56px 0; }
-
-  .about-photo {
-    float: none;
-    width: 100%;
-    margin: 0 0 1.25rem;
-  }
 
   .contact-form .btn { align-self: stretch; justify-content: center; }
 }
