@@ -280,6 +280,20 @@ section {
   margin: 0 auto;
 }
 
+.about-content::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.about-photo {
+  float: right;
+  width: min(320px, 40%);
+  margin: 0 0 1.25rem 1.75rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(13, 43, 82, 0.15);
+}
+
 /* ---------- Contact ---------- */
 .contact {
   padding: 80px 0;
@@ -422,21 +436,8 @@ section {
 
   .nav-buttons .btn { justify-content: center; }
 
-  /* stack the hero: title first, then photo, text, button */
-  .hero-inner {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .hero h1 { order: -1; }
-
-  .hero-photo {
-    float: none;
-    width: 100%;
-    max-width: 420px;
-    align-self: center;
-    margin: 0 0 1.25rem;
-  }
+  /* mobile: no photo in the hero (it appears in the About section instead) */
+  .hero-photo { display: none; }
 }
 
 @media (max-width: 700px) {
@@ -446,8 +447,6 @@ section {
 
   .hero { padding: 48px 0; }
 
-  .hero-photo { max-width: none; }
-
   .hero h1 { font-size: 1.5rem; }
 
   .hero-text { font-size: 1.05rem; }
@@ -455,6 +454,12 @@ section {
   .section-title { font-size: 1.6rem; }
 
   .services, .about, .contact { padding: 56px 0; }
+
+  .about-photo {
+    float: none;
+    width: 100%;
+    margin: 0 0 1.25rem;
+  }
 
   .contact-form .btn { align-self: stretch; justify-content: center; }
 }
