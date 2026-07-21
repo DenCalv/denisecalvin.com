@@ -9,4 +9,8 @@ return [
     'smtp_password'   => '',
     'smtp_from_email' => '',       // e.g. 'noreply@denisecalvin.com'
     'smtp_from_name'  => "Denise Calvin's Bookkeeping and Financial Services",
+
+    // Secret for the GitHub deploy webhook (gitwebhook.php) — must match
+    // the secret configured on the GitHub webhook settings page.
+    'github_webhook_secret' => '',
 ];

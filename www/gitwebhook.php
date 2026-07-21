@@ -1,11 +1,19 @@
 <?php
 
 // /var/www/myapp/webhook.php
+// Secret lives in config.local.php (gitignored); see config.local.php.example.
 
-$secret = 'the_quick_brown_fox';
+$config = is_file(__DIR__ . '/config.local.php') ? require __DIR__ . '/config.local.php' : [];
+$secret = $config['github_webhook_secret'] ?? '';
 
 $deployScript = '/home/lillyjane/deploy_scripts/denisecalvin.com.deploy.sh';
 $logFile = '/home/lillyjane/deploy_scripts/denisecalvin.com.deploy.log';
+
+if ($secret === '') {
+    http_response_code(500);
+    echo "Webhook not configured\n";
+    exit;
+}
 
 $payload = file_get_contents('php://input');
 $signature = $_SERVER['HTTP_X_HUB_SIGNATURE_256'] ?? '';
