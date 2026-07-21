@@ -1,0 +1,49 @@
+I want to build a website "denisecalvin.com".
+
+It should look like https://www.nycaccountingconsulting.com - with a announcement bar, header with logo and menu, call button, book a consultation button. 
+
+It should also be in blue.
+
+1. The homepage:
+After the menu...
+
+Section #1: top section.
+Welcome to Denise Calvin’s bookkeeping and financial services, your trusted provider of bookkeeping, accounting, tax, and payroll services in Castries, St. Lucia. Whether you are an individual taxpayer or a business owner, we deliver smart, personalized solutions backed by reviews from our customers.
+Book a consultation button (blue with an arrow)
+
+Section #2: 
+
+What We Do section (on the homepage).  Cards for each of these
+Payroll
+Bookkeeping
+Business Tax
+Individual Taxes
+Review Services
+Business Registration & Development
+Each should have a photo, title, short description.  Let's not have them link anywhere for now, but eventually we'll link to dedicated sections about these.
+
+Section #3: About Denise Calvin
+Should have my photo floating on the top right, with bio text.
+For now, let's have placeholder text.  Something that says Denise Calvin
+
+Section #4: Contact Us:
+
+A standard form which should in php email Denise Calvin at "nattyden@hotmail.com"
+
+Your name:
+Your email:
+Your phone number:
+Description of what you are looking for: [textarea]
+
+For now, this should be a one-page web site where the menu links to the section on the homepage.
+
+The menu should be "Services" which should link to "What we do".  "About" which should link to the "About Denise Calvin" section.  And "Contact Us" which should link to the contact us section.
+
+There are images for each of the services in www/images
+There is denise_calvin.png also in www/images which should be with the bio (floated on desktop, full-width mobile).
+
+Please make it work on mobile well - menu should become a hamburger menu on mobile.
+
+
+
+
